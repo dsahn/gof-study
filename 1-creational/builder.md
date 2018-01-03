@@ -8,6 +8,7 @@
  각기 다른 구현이 서브클래스에 구현되어 있고, 이는 전부 생성에 대한 동작임. 조립, 조립, 조립 후 생성! 하는 동작에서
  사용할 수 있는 패턴.
  - 빌더 패턴을 사용하는 클래스는 director
+ - Separate the construction of a complex object from its representation so that the same construction process can create different representations. **같은 생성 과정, 다른 표현물**
 
 ## 활용성
  - 복합객체(builder가 생성할 객체)의 이를 합성하는 요소 객체들이 무엇인지 이들의 조립방법에 독립적일 때.
