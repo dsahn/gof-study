@@ -36,11 +36,11 @@ public:
 class PizzaBuilder
 {
 protected:
-    std::auto_ptr<Pizza> pizza;
+    std::shared_ptr<Pizza> pizza;
 public:
     PizzaBuilder() {}
     virtual ~PizzaBuilder() {}
-    std::auto_ptr<Pizza> GetPizza() { return pizza; }
+    std::shared_ptr<Pizza> GetPizza() { return pizza; }
 
     void createNewPizzaProduct() { pizza.reset (new Pizza); }
 
@@ -83,7 +83,7 @@ public:
     ~Waiter() { }
 
     void SetPizzaBuilder(PizzaBuilder* b) { pizzaBuilder = b; }
-    std::auto_ptr<Pizza> GetPizza() { return pizzaBuilder->GetPizza(); }
+    std::shared_ptr<Pizza> GetPizza() { return pizzaBuilder->GetPizza(); }
     void ConstructPizza()
     {
         pizzaBuilder->createNewPizzaProduct();
@@ -101,7 +101,7 @@ int main()
     HawaiianPizzaBuilder hawaiianPizzaBuilder;
     waiter.SetPizzaBuilder (&hawaiianPizzaBuilder);
     waiter.ConstructPizza();
-    std::auto_ptr<Pizza> pizza = waiter.GetPizza();
+    std::shared_ptr<Pizza> pizza = waiter.GetPizza();
     pizza->ShowPizza();
 
     SpicyPizzaBuilder spicyPizzaBuilder;
