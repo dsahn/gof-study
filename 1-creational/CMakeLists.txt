@@ -3,5 +3,7 @@ cmake_minimum_required (VERSION 2.6)
 add_definitions(-g -Wall)
 add_executable(builder.out builder1.cc)
 add_executable(factory_method.out factory_method.cpp)
+add_executable(prototype.out prototype.cpp)
+
 set_property (TARGET builder.out PROPERTY CXX_STANDARD 11)
-set_property (TARGET factory_method.out PROPERTY CXX_STANDARD 11)
+set_property (TARGET prototype.out PROPERTY CXX_STANDARD 11)
