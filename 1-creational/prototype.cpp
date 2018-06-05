@@ -25,7 +25,7 @@ class ConcretePrototype1 : public Prototype
 public:
     ConcretePrototype1(int number)
     {
-        type = "typ1;";
+        type = "typ1";
         value = number;
     }
 
