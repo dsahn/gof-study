@@ -29,6 +29,7 @@ public:
         value = number;
     }
 
+    // 자동 생성되는 복사 생성자를 호출하는 듯
     Prototype* clone() { return new ConcretePrototype1(*this); }
 };
 
